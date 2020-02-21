@@ -26,6 +26,8 @@ namespace DatingAppCourseProject
                 options.UseSqlServer(Configuration.GetConnectionString("SqlServerDataBase"));
             });
 
+            services.AddCors();
+            
             services.AddScoped<ValuesRepository>();
             
             services.AddControllers();
@@ -42,6 +44,8 @@ namespace DatingAppCourseProject
             //app.UseHttpsRedirection();
 
             app.UseRouting();
+
+            app.UseCors(x => x.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader());
 
             app.UseAuthorization();
 
