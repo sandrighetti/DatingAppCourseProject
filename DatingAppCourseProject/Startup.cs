@@ -1,5 +1,6 @@
 using DatingAppCourseProject.Data;
 using DatingAppCourseProject.Repositories;
+using DatingAppCourseProject.Repositories.Interfaces;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.EntityFrameworkCore;
@@ -27,9 +28,9 @@ namespace DatingAppCourseProject
             });
 
             services.AddCors();
-            
-            services.AddScoped<ValuesRepository>();
-            
+
+            services.AddScoped<IAuthRepository, AuthRepository>();
+
             services.AddControllers();
         }
 
