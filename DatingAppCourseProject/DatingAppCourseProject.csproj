@@ -9,6 +9,8 @@
     <Compile Remove="Migrations\20200221143054_AddedUserEntity.Designer.cs" />
     <Compile Remove="Migrations\20200221143816_AddedUserEntity.cs" />
     <Compile Remove="Migrations\20200221143816_AddedUserEntity.Designer.cs" />
+    <Compile Remove="Migrations\20200226141945_ExtendedUserClass.cs" />
+    <Compile Remove="Migrations\20200226141945_ExtendedUserClass.Designer.cs" />
   </ItemGroup>
 
   <ItemGroup>
